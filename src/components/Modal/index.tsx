@@ -10,7 +10,7 @@ export interface ModalHandles {
 	closeModal: () => void;
 }
 
-const Modal: React.RefForwardingComponent<ModalHandles> = (props, ref) => {
+const Modal: React.ForwardRefRenderFunction<ModalHandles> = (props, ref) => {
 	const [visible, setVisible] = useState(true);
 
 	const openModal = useCallback(() => {

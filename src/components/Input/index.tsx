@@ -5,7 +5,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 	label: string;
 }
 
-const Input: React.RefForwardingComponent<HTMLInputElement, InputProps> = (
+const Input: React.ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
 	{ label, name, ...rest },
 	ref
 ) => {
